@@ -7,12 +7,19 @@
    
 </head>
 <body>
+    <div class="nav">
+        <ul>
+            <li><a href="#Endroits">Endroits</a></li>
+            <li><a href="#cuisine">Cuisine</a></li>
+            <li><a href="index.html">Retour</a></li>
+        </ul>
+    </div>
     <div class="header">
         <h1>Cuba</h1>
         <img class="flag" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Flag_of_Cuba.svg/1200px-Flag_of_Cuba.svg.png" width="80" height="50" alt="Cuba flag"/>
     </div>
     
-    <h2 class="section-title">Endroits à Visiter</h2>
+    <h2 class="section-title" id="Endroits">Endroits à Visiter</h2>
     
     <div class="container">
         <div class="rectangle">
@@ -34,7 +41,7 @@
         </div>
     </div>
     
-    <h2 class="section-title">Cuisine Cubaine</h2>
+    <h2 class="section-title" id="cuisine">Cuisine Cubaine</h2>
     
     <div class="container">
         <div class="rectangle">
@@ -58,6 +65,9 @@
 
     </div>
      <style>
+        html {
+            scroll-behavior: smooth;
+        }
         body {
             margin: 0;
             padding: 0;
@@ -69,7 +79,8 @@
         .header {
             text-align: center;
             padding: 20px;
-  top: 0;
+  nav: 0;
+   transition: transform 0.3s cubic-bezier(0.26, 0.31, 0.4, 0.41);
         }
         
     
@@ -129,6 +140,40 @@
             color: #555;
         }
         
+        .nav {
+            background-color: #FCD299;
+            border-radius: 10px;
+            border: 2px dashed black;
+            padding: 15px;
+            width: 900px;
+            margin: 20px auto;
+            transition: transform 0.3s ease;
+        }
+
+
+
+        .nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+            margin: 0;
+        }
+
+
+        .nav a {
+            text-decoration: none;
+            color: black;
+            font-size: 22px;
+            font-weight: bold;
+            padding: 10px 20px;
+            transition: transform 0.2s;
+            display: inline-block;
+        }
+
+        .nav a:hover {
+            transform: scale(1.1);
+        }
       
     </style>
 </body>
