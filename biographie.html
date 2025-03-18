@@ -8,10 +8,12 @@
    <body>
      <div> <center><h1 class="title">Biographie </h1></center>
      
-    <div style="background-color: #333; padding: 10px; text-align: center;">
-  <a href="#a propos de moi" style="color: white; margin: 0 15px; text-decoration: none;">À propos</a>
-  <a href="#Mes competence" style="color: white; margin: 0 15px; text-decoration: none;">Compétences</a>
-  <a href="#Mes lien prefere" style="color: white; margin: 0 15px; text-decoration: none;">Liens</a>
+    <div style="background-color: #FCD299; padding: 10px; text-align: center; border-radius: 20px; font-size: 20px; border: black solid">
+  
+      <a href="#a propos de moi" style="color: white; margin: 0 20px; text-decoration: none;">A propos</a>
+            <a href="#Mes competence" style="color: white; margin: 0 20px; text-decoration: none;">competence</a></a>
+            <a href="#Mes lien prefere" style="color: white; margin: 0 20px; text-decoration: none;">Mes lien prefere</a></a>
+            <a href="index.html" style="color: white; margin: 0 20px; text-decoration: none;">Retour</a> 
 </div>
      
      
@@ -44,7 +46,7 @@ font-weight: bold;
   
   
   <div style="text-align: center; margin: 20px;">
-  <h2>Mes compétences</h2>
+  <h2 id="Mes competence">Mes compétences</h2>
   
   <div style="background: #f5f7fa; border-radius: 10px; width: 300px; padding: 15px; margin: 0 auto; border: 1px solid #ddd;">
     <h3>Compétences technologiques</h3>
@@ -75,20 +77,21 @@ font-weight: bold;
  
  <div id="Mes lien prefere">
     <div class="Mes lien prefere">
-   <center><h2>Mes lien prefere</h4></center>
+   <center><h2>Mes lien prefere</h4>
    <a href="https://www.youtube.com/" class="link-box">1.Youtube</a>
    <a href="https://finance.yahoo.com/?guccounter=1&guce_referrer=aHR0cHM6Ly93d3cuYmluZy5jb20v&guce_referrer_sig=AQAAAKKz161F-1tEpHDgczA8LBwOMBmu0qusKt9ZXWIWSS_JTlfuNeXdEO109dnWbJmsNN_Vg48OSZyQ1l4PPGnInnkx9_aaXGHF2dU4bgg_aeebRzr0aaEPEb3Ie0Ld3Eemo04nGDsXLE_RNMbtrS6ievylOrejpVk1Mqhb2FnQ6xfY" class="link-box"> 2.Yahoo finance</a>
    <a href="https://myflixerz.to/watch-movie/the-social-network-18956.5298736" class="link-box">3.myflixer</a>
- <a href="https://maze.toys/mazes/mini/daily/"class="link-box"> 4.Mini maze</a>
+ <a href="https://maze.toys/mazes/mini/daily/"class="link-box"> 4.Mini maze</a></center>
  <img src=""/>
   </div>
  
  <style>
    body {
+     
      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
-background: linear-gradient(to right, #ff7e5f, #feb47b);
+ background: linear-gradient(to right, #ff7e5f, #feb47b);
   color: #333;
   line-height: 1.6
    }
@@ -99,7 +102,11 @@ background: linear-gradient(to right, #ff7e5f, #feb47b);
             justify-content: center;
             gap: 20px;
             margin-top: 20px;
-   }
+            background-image: url('https://th.bing.com/th/id/OIP.gXDAsM3eyXW3wlU8IMGrfgHaHa?rs=1&pid=ImgDetMain');
+   }   
+   html {
+            scroll-behavior: smooth;
+        }
    
    .link-box{
      width: 20px;
@@ -118,6 +125,13 @@ background: linear-gradient(to right, #ff7e5f, #feb47b);
      height: 100px;
    }
    
+   .box:hover{
+     
+   }
+   
+   
+   
    
    
  </style>
+ </html>
