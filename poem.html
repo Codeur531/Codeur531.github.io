@@ -1,30 +1,30 @@
 <!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="fr"> <!-- Definis la langue du document-->
+    <head>
+    <meta charset="UTF-8"> <!-- Perment a afficher correctement  les caractères "spéciaale"-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Adapt la page dans different ecrans-->
     <title>Un Poème</title>
     <style>
-        body {
+        /*DEcris l'Apparence du site, l'arriere plan, grandeur de l'ecriture*/body {
             background: linear-gradient(to right, #ff7e5f, #feb47b);
             font-size: 20px;
             text-align: center;
         }
-        .bubble {
+        /*Cree une bordure pointiller autour du poeme avec une bordure arrondis*/.bubble {
             border-radius: 20px;
             border: black dashed;
             width: 450px;
             margin: auto;
             padding: 15px;
         }
-        img {
+       /*Limage et ronde et  entourées d'une bordure noir*/ img {
             border-radius: 50%;
             height: auto;
             max-width: 100%;
             border: solid black;
             margin: 20px 0;
         }
-        .back {
+      /*Ici jai crée un bouton de retour en haut a gauche de la page*/  .back {
             position: fixed;
             top: 10px;
             left: 10px;
@@ -40,23 +40,23 @@
             z-index: 1000;
             transition: transform 0.2s;
         }
-        .back:hover {
+      /*Effet Zoom*/  .back:hover {
             transform: scale(1.1);
         }
     </style>
 </head>
 <body>
-    <h1>Un poème</h1>
-    <h3 style="font-family: 'Dancing Script', cursive;">Titre: Ce qui dure</h3>
-    <p><i>Voici le poème par: René-François Sully Prudhomme (1839-1907)</i></p>
+   <!--Titre principale du site--> <h1>Un poème</h1>
+   <!-- La police du site--> <h3 style="font-family: 'Dancing Script', cursive;">Titre: Ce qui dure</h3>
+   <!-- nom de l'auteur en italique--> <p><i>Voici le poème par: René-François Sully Prudhomme (1839-1907)</i></p>
     
-    <a href="index.html" class="back">
+    <!-- Lien de retour a la page d'accuielle--> <a href="index.html" class="back">
         <img src="https://png.pngtree.com/element_our/20190601/ourlarge/pngtree-return-icon-image_1344469.jpg" height="30px" width="30px">
     </a>
     
-    <div class="bubble">
+   <!--CSS pour le poem--> <div class="bubble">
         <p>
-            Le présent se fait vide et triste,<br>
+        <!-- Ajoute des saut de ligne-->    Le présent se fait vide et triste,<br>
             Ô mon amie, autour de nous ;<br>
             Combien peu de passé subsiste !<br>
             Et ceux qui restent changent tous.<br><br>
@@ -83,8 +83,8 @@
         </p>
     </div>
     
-    <img src="https://th.bing.com/th/id/OIP.Iajpmp3T9_9jeyZ8wyzqJgHaKe?rs=1&pid=ImgDetMain" width="300">
+<!-- Image associer au poeme-->    <img src="https://th.bing.com/th/id/OIP.Iajpmp3T9_9jeyZ8wyzqJgHaKe?rs=1&pid=ImgDetMain" width="300">
     <br>
-    <a href="https://www.poesie-francaise.fr/rene-francois-sully-prudhomme/poeme-priere.php">Source</a>
+    <!-- lien du poem--><a href="https://www.poesie-francaise.fr/rene-francois-sully-prudhomme/poeme-priere.php">Source</a>
 </body>
 </html>
