@@ -1,68 +1,68 @@
+
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8"> <!-- assure que tout les caractère spéciaux pour qu'il apparait "normal"-->
+  <meta charset="UTF-8"> <!-- assure que tout les caractères spéciaux apparaissent "normal" -->
   <title>Accueil</title>
-  <style>  <!-- Style CSS interne -->
-
-    body <!-- style de la page web--> {
-      background: linear-gradient(to right, #ff7e5f, #feb47b); <!-- couleur de l'arrière plan de la page web utilisant des code de couleurs-->
+  <style>  
+    body { /* style de la page web */
+      background: linear-gradient(to right, #ff7e5f, #feb47b); /* couleur de l'arrière plan de la page web utilisant des code de couleurs */
       color: white;
-      font-family: Arial, sans-serif; <!-- Style d'écriture utiliser sur la page web-->
-      text-align: center; <!-- Centre les element au centre de la page-->
-      margin: 0; <!-- L'espace a l'exterieur des bordure-->
-      padding: 20px; <!-- Ajoute de l'especa autour du contenu-->
+      font-family: Arial, sans-serif; /* Style d'écriture utilisé sur la page web */
+      text-align: center; /* Centre les éléments au centre de la page */
+      margin: 0; /* L'espace à l'extérieur des bordures */
+      padding: 20px; /* Ajoute de l'espace autour du contenu */
     }
     
    
     h1 {
       color: white;
-      font-size: 40px; <!--taile de l'ecriture-->
+      font-size: 40px; /* taille de l'écriture */
       margin: 30px 0;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); <!-- Ajoute un ombre sur le texte pour que sa soit plus lisible-->
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Ajoute une ombre sur le texte pour qu'il soit plus lisible */
     }
     
    
     .boxes {
-      margin: 40px auto; <!-- L'espace a l'exterieur des bordure-->
-      max-width: 1200px; <!-- Ce code est utiliser pour limiter la largeur du contenu-->
+      margin: 40px auto; /* L'espace à l'extérieur des bordures */
+      max-width: 1200px; /* Ce code est utilisé pour limiter la largeur du contenu */
     }
     
   
     .box {
       width: 450px;
       height: 220px;
-      display: inline-block; <!--- permet au boite de etre cote a cote-->
-      margin: 15px; <!-- ajoute de l'espace entre les boites-->
-      border-radius: 15px; <!--Arondis les coint des boite-->
-      text-decoration: none; <!-- Suprime les soulignement des lien ( par exemple: sur les lien comme biographie, Poem etc )-->
+      display: inline-block; /* permet aux boites d'être côte à côte */
+      margin: 15px; /* ajoute de l'espace entre les boites */
+      border-radius: 15px; /* Arrondit les coins des boites */
+      text-decoration: none; /* Supprime les soulignements des liens (par exemple: sur les liens comme biographie, Poème etc) */
       background-size: cover;
       background-position: center;
-      position: relative; <!-- Centre les élement dans la boite-->
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); <!-- Ajoute une ombre-->
-      overflow: hidden; <!-- Overflow cahe les contenue qui sort de la limite de la boite-->
+      position: relative; /* Centre les éléments dans la boite */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Ajoute une ombre */
+      overflow: hidden; /* Overflow cache les contenus qui sortent de la limite de la boite */
     }
     
     
     .overlay {
-      background-color: rgba(0, 0, 0, 0.5); <!-- Crée une arritre plan noir semi-transparent-->
+      background-color: rgba(0, 0, 0, 0.5); /* Crée un arrière plan noir semi-transparent */
       width: 100%;
       height: 100%;
-      display: flex; <!-- Utiliser pour centrer les element a l'interieur ( lien utiliser:https://www.w3schools.com/csS/css3_flexbox.asp )-->
-      align-items: center; <!-- Centre le texte-->
+      display: flex; /* Utilisé pour centrer les éléments à l'intérieur (lien utilisé: https://www.w3schools.com/csS/css3_flexbox.asp) */
+      align-items: center; /* Centre le texte */
       justify-content: center;
-      transition: background-color 0.3s; <!-- Crée une belle transition de couleur quand tu survole la boite-->
+      transition: background-color 0.3s; /* Crée une belle transition de couleur quand on survole la boite */
     }
     
     .box:hover .overlay {
-      background-color: rgba(0, 0, 0, 0.7); <!-- Quand tu survole la souris au dece de la boite sa devien plus noi opaque-->
+      background-color: rgba(0, 0, 0, 0.7); /* Quand on survole la souris au-dessus de la boite, ça devient plus noir opaque */
     }
     
   
     .box p {
       color: white;
       font-size: 24px;
-      font-weight: bold; <!-- Style d'écriture
+      font-weight: bold; /* Style d'écriture */
       text-shadow: 2px 2px 4px black;
     }
     
