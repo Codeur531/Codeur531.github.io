@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Modulo</title>
+</head>
+<body>
+  <!-- Calculatrice de modulo -->
+  <form>
+    <h1>Calculatrice</h1>
+    <!-- textbox pour le nombre1 et le nombre 2  -->
+    <label for="txtNombre1">Nombre1:</label>
+    <input type="text" id="txtNombre1">
+    <label for="txtNombre2">Nombre2:</label>
+    <input type="text" id="txtNombre2">
+    <br><br>
+
+
+    <!-- bouton pour soumettre le formulaire -->
+    <input type="button" id="btnCalcule" onclick="calculeModulo()"  value="Calcule le Modulo">
+    <input type="button" id="btnCalcule" onclick="calculePlus()"  value="Calcule le plus">
+    <input type="button" id="btnCalcule" onclick="calculeMoin()"  value="Calcule le moins">
+   
+    <!-- Création d'une section pour l'affichage des résultats -->
+    <div id="divAffiche">
+    </div>
+   
+    <script>
+        function calculeModulo() {
+            //Chercher les données dans le formulaire
+            var nombre1 = document.getElementById("txtNombre1").value;
+            var nombre2 = document.getElementById("txtNombre2").value;
+           
+            var affiche = document.getElementById("divAffiche");
+           
+            //Construire le message à afficher
+            var message = "<br><br>" + nombre1 + " % " + nombre2 + " = " + (nombre1%nombre2);
+            
+           
+            //Afficher le message sur la page web
+            affiche.innerHTML = message;
+        }
+        
+        function calculeMoin(){
+            //Chercher les données dans le formulaire
+            var nombre1 = document.getElementById("txtNombre1").value;
+            var nombre2 = document.getElementById("txtNombre2").value;
+           
+            var affiche = document.getElementById("divAffiche");
+           
+            //Construire le message à afficher
+          
+            var message = "<br><br>" + nombre1 + " - " + nombre2 + " = " + (nombre1 - nombre2);
+           
+            //Afficher le message sur la page web
+          
+           }
+           function calculePlus(){ 
+    // Chercher les données dans le formulaire
+    var nombre1 = document.getElementById("txtNombre1").value;
+    var nombre2 = document.getElementById("txtNombre2").value;
+   
+    var affiche = document.getElementById("divAffiche");
+   
+    // Construire le message à afficher
+    var message = "<br><br>" + nombre1 + " + " + nombre2 + " = " + (parseFloat(nombre1) + parseFloat(nombre2));
+   
+    // Afficher le message sur la page web
+    affiche.innerHTML = message;
+}
+
+    </script>
+  </form>
+</body>
+</html>
