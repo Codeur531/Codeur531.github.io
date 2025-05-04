@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Inscription</title>
+</head>
+<body>
+  <!-- Formulaire d'inscription -->
+  <form>
+    <h1>Quiz de codage</h1>
+    <!-- textbox pour le nom de l'élève -->
+    <label for="txtNom">Nom:</label>
+    <input type="text" id="txtNom">
+    <br><br>
+    <!-- radio button pour l'année d'étude secondaire -->
+    <label for="radGrade">Année d'étude:</label>
+    <input type="radio" name="annee" value="9e">9e
+    <input type="radio" name="annee" value="10e">10e
+    <input type="radio" name="annee" value="11e" checked>11e
+    <input type="radio" name="annee" value="12e">12e
+    <br><br>
+    <!-- select pour le nom de l'école -->
+    <label for="selEcole">Type de cours:</label>
+    <select id="selEcole">
+      <option value="Cours collegiale/universitaire">Cours collegiale/universitaire</option>
+      <option value="Cours collegiale">Cours collegiale</option>
+      <option value="Cours universitaire">Cours universitaire</option>
+    </select>
+    <br><br>
+
+    <!-- Checkbox pour les langues que tu connais -->
+    <label for="chkLangues">Code prefere::</label><br>
+    <input type="checkbox" id="chkLangues" name="langues" value="Tu es inscit pour coder HTML">HTML<br>
+    <input type="checkbox" id="chkLangues" name="langues" value="Tu es inscit pour coder Java/ Javascript">Java/Javascript<br>
+    <input type="checkbox" id="chkLangues" name="langues" value="Tu es inscit pour coder Python">Python<br>
+    <input type="checkbox" id="chkLangues" name="langues" value="wrong">Rien<br>
+
+    <br>
+
+    <!-- bouton pour soumettre le formulaire -->
+    <input type="button" id="btnSoumet" onclick="confirmeInscription()"  value="Soumettre le formulaire">
+    <!-- Création d'une section pour l'affichage des résultats -->
+    <div id="divAffiche">
+    </div>
+    <script>
+        function confirmeInscription() {
+            //Chercher les données dans le formulaire
+            var nom = document.getElementById("txtNom").value;
+            var ecole = document.getElementById("selEcole").value;
+            var affiche = document.getElementById("divAffiche");
+            //Pour déterminer lequel des radio buttons est coché
+            var radiosAnnee = document.getElementsByName("annee");
+            //Variable pour stocker l'année choisie
+            var annee = "";
+            for (var i = 0; i < radiosAnnee.length; i++) {
+              if (radiosAnnee[i].checked) {
+                  annee = radiosAnnee[i].value;
+              }
+            }
+            //Pour déterminer lesquels des checkbox sont cochés
+            var checkLangues = document.getElementsByName("langues");
+            var messageBonjour = "";
+            var score = 0; 
+            for (var i=0; i < checkLangues.length; i++) {
+              if (checkLangues[i].checked && checkLangues[i].value !== "wrong") { 
+                messageBonjour += " " + checkLangues[i].value;
+                score++; 
+              }
+            }
+
+            //Construire le message à afficher
+            var message = "<br><br>Chère " + nom + ":  " + messageBonjour
+                             + " <br><br>" + "Tu es maintenant inscrit au cours de codage de "
+                             + annee + " à " + ecole + ".";
+            //Afficher le message sur la page web
+            affiche.innerHTML = message + "<br><br>Score: " + score + "/3"; 
+        }
+    </script>
+  </form>
+</body>
+</html>
