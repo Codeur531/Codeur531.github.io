@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Inscription</title>
+</head>
+<body>
+  <!-- Formulaire d'inscription -->
+  <form>
+    <h1>Formulaire d'inscription</h1>
+    <!-- textbox pour le nom de l'élève -->
+    <label for="txtPrenom">Nom:</label>
+    <input type="text" id="txtPrenom">
+    <br><br>
+    <label for="txtMilieu">Nom du milieu:</label>
+    <input type="text" id="txtMilieu">
+    <br><br>
+    <label for="txtFamille">Dernier nom:</label>
+    <input type="text" id="txtFamille">
+    <br><br>
+
+    <!-- Checkbox pour les langues que tu connais -->
+    <label for="chkLangues">Langues parlées:</label><br>
+    <input type="checkbox" name="langues" value="Initiales">Initiales<br>
+    <input type="checkbox" name="langues" value="Nom d'utilisateur">Nom d'utilisateur<br>
+    <input type="checkbox" name="langues" value="Nom au complet">Nom au complet<br>
+
+    <br>
+
+    <!-- bouton pour soumettre le formulaire -->
+    <input type="button" id="btnSoumet" onclick="confirmeInscription()" value="Soumettre le formulaire">
+    <!-- Création d'une section pour l'affichage des résultats -->
+    <div id="divAffiche">
+    </div>
+
+    <script>
+      function confirmeInscription() {
+        // Prendre les noms
+        var prenom = document.getElementById("txtPrenom").value;
+        var milieu = document.getElementById("txtMilieu").value;
+        var famille = document.getElementById("txtFamille").value;
+
+        // Pour déterminer quels checkbox sont cochés
+        var checkLangues = document.getElementsByName("langues");
+        var message = "";
+        for (var i = 0; i < checkLangues.length; i++) {
+          if (checkLangues[i].checked) {
+            if (checkLangues[i].value === "Initiales") {
+              message += "<br>Initiales: " + prenom.charAt(0) + "." + milieu.charAt(0) + "." + famille.charAt(0);
+            } else if (checkLangues[i].value === "Nom au complet") {
+              message += "<br>Nom au complet: " + prenom + " " + milieu + " " + famille;
+            } else if (checkLangues[i].value === "Nom d'utilisateur") {
+              message += "<br>Nom d’utilisateur: " + prenom.charAt(0).toLowerCase() + milieu.charAt(0).toLowerCase() + famille.toLowerCase();
+            }
+          }
+        }
+
+        // Afficher le résultat
+        document.getElementById("divAffiche").innerHTML = message;
+      }
+    </script>
+  </form>
+</body>
+</html>
