@@ -1,0 +1,106 @@
+<!--- J’adore l’été !  Chaque jour, quand je suis en vacances, 
+je me réveille, je mets mes ________________ (vêtements - nom pluriel), 
+je me rend à la cuisine et je mange _________________ (nourriture, avec déterminant) 
+pour déjeuner.  Ensuite, mon activité préféré est de _______________ 
+(action - verbe à l’infinitif) avec mon ami __________________ (nom d’ami). 
+À 14h, je dîne.  Je mange des _________________ (nourriture - au pluriel) ___________________ (adjectif).  
+Durant l’après-midi, j’aime me rendre au parc et de ________________ (action - verbe à l’infinitif) 
+_________________ (adverbe qui termine en -ment).  En soirée, je mange toujours du __________________ 
+(nourriture) pour le souper.  Finalement, je me couche et je rêve de ______________________ (nom).  
+Quel été _______________ (adjectif) !
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Mad Libs</title>
+</head>
+<body>
+  <!-- Formulaire de Madlibs -->
+  <form>
+    <h1>MadLibs</h1>
+    <p>Complète les champs demandés et clique sur le bouton "Génère Madlibs" pour créer une histoire MadLibs.</p>
+    <!-- textbox pour les nombres entrés -->
+    <label for="txtVetement">Vêtements - nom pluriel : </label>
+    <input type="text" id="txtVetement">
+    <br><br>
+    <label for="txtNourriture">Nourriture, avec déterminant : </label>
+    <input type="text" id="txtNourriture">
+    <br><br>
+    <label for="txtAction">Action - verbe à l’infinitif : </label>
+    <input type="text" id="txtAction">
+    <br><br>
+    <label for="txtNomAmi">Nom d’ami : </label>
+    <input type="text" id="txtNomAmi">
+    <br><br>
+    <label for="txtNourriturePluriel">Nourriture - au pluriel : </label>
+    <input type="text" id="txtNourriturePluriel">
+    <br><br>
+    <label for="txtAction2">Action - verbe à l’infinitif : </label>
+    <input type="text" id="txtAction2">
+    <br><br>
+    <label for="txtAdverbe">Adverbe qui termine en -ment : </label>
+    <input type="text" id="txtAdverbe">
+    <br><br>
+    <label for="txtNourritureEncore">Nourriture : </label>
+    <input type="text" id="txtNourritureEncore">
+    <br><br>
+    <label for="txtNomVedette">Nom de vedette : </label>
+    <input type="text" id="txtNomVedette">
+    <br><br>
+    <label for="txtAdjectif">Adjectif : </label>
+    <input type="text" id="txtAdjectif">
+    <br><br>
+    
+    <br><br>
+
+    <!-- bouton de création de Madlib -->
+    <input type="button" id="btnMadlib" onclick="genereMadlibs()"  value="Génère Madlibs">
+    
+    <!-- Création d'une section pour l'affichage des résultats -->
+    <div id="divAffiche">
+        
+    </div>
+    <script>
+     
+         function genereMadlibs() {
+    // predn le valurs de l'autre
+    var vetement = document.getElementById("txtVetement").value;
+    var nourriture = document.getElementById("txtNourriture").value;
+    var action = document.getElementById("txtAction").value;
+    var nomAmi = document.getElementById("txtNomAmi").value;
+    var nourriturePluriel = document.getElementById("txtNourriturePluriel").value;
+    var action2 = document.getElementById("txtAction2").value;
+    var adverbe = document.getElementById("txtAdverbe").value;
+    var nourritureEncore = document.getElementById("txtNourritureEncore").value;
+    var nomVedette = document.getElementById("txtNomVedette").value;
+    var adjectif = document.getElementById("txtAdjectif").value;
+
+    var affiche = document.getElementById("divAffiche");
+
+    // contruit l'histoire
+    var message = "<br><hr><br>J’adore l’été !  Chaque jour, quand je suis en vacances, ";
+    message += "je me réveille, je mets mes " + vetement + ", ";
+    message += "je me rends à la cuisine et je mange " + nourriture + " pour déjeuner. ";
+    message += "Ensuite, mon activité préférée est de " + action + " avec mon ami " + nomAmi + ". ";
+    message += "À 14h, je dîne. Je mange des " + nourriturePluriel + " " + adjectif + ". ";
+    message += "Durant l’après-midi, j’aime me rendre au parc et de " + action2 + " " + adverbe + ". ";
+    message += "En soirée, je mange toujours du " + nourritureEncore + " pour le souper. ";
+    message += "Finalement, je me couche et je rêve de " + nomVedette + ". ";
+    message += "Quel été " + adjectif + " !";
+
+ //affiche les resulta
+    affiche.innerHTML = message;
+}
+
+console.log(genereMadlibs())
+
+    </script>
+  </form>
+</body>
+</html>
+
+
+
+
