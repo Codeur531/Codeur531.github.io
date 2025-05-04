@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Hello, World!</title>
-  <link rel="stylesheet" href="styles.css" /> <!-- Lien vers les fichier externe de CSS ( lien utiliser: https://www.w3schools.com/tags/att_link_rel.asp)-->
+  <link rel="stylesheet" href="styles.css" />
   <style>
    body {
      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -13,22 +13,20 @@
      color: #333;
      line-height: 1.6;
    }
-   
-   .mes-liens-preferes { /* Dans cette section sa vas affecter "Mes lien prefere" et le design et sa va s'appliquer sur le HTML. Sa les centre, les espacent et leur applique une image de fond*/
+
+   .mes-liens-preferes {
      display: flex;
-     flex-wrap: wrap; /*lien utiliser: https://www.w3schools.com/cssref/css3_pr_flex-wrap.php*/
+     flex-wrap: wrap;
      justify-content: center;
      gap: 20px;
      margin-top: 20px;
-     /* Suppression de la ligne suivante pour enlever l'image de fond */
-     /* background-image: url('https://th.bing.com/th/id/OIP.gXDAsM3eyXW3wlU8IMGrfgHaHa?rs=1&pid=ImgDetMain'); */
-   }   
-   
-   html {
-     scroll-behavior: smooth; /* quand sa tu appuis sur le burron pour aller dans la section choisi c'est fluide et doux (lein: https://www.w3schools.com/cssref/pr_scroll-behavior.php )*/
    }
-   
-   .link-box { /*Cette secntion vas juste s'appliquer sur les section qui dise ( id="link-box"). Cette sextion rend les lien cliquable en les placent en order. Deplus jai ajouter une transtion au survol de la souris pour l'amiliorer*/
+
+   html {
+     scroll-behavior: smooth;
+   }
+
+   .link-box {
      width: auto;
      display: inline-block;
      background: white;
@@ -43,85 +41,74 @@
    }
 
    .link-box, div {
-     transition: transform 0.3s, box-shadow 0.3s; /* ajoute des effets visuelle sur le site ( lien: https://www.w3schools.com/css/css3_transitions.asp ) */
+     transition: transform 0.3s, box-shadow 0.3s;
    }
 
    .link-box:hover, div:hover {
-     transform: translateY(-5px); 
-     box-shadow: 0 0 15px orange; /*Sa vas faire que quand tu mais ta souris devant la case sa vas brillier orange- ( lien: https://www.w3schools.com/CSSref/sel_hover.php )*/
+     transform: translateY(-5px);
+     box-shadow: 0 0 15px orange;
    }
   </style>
 </head>
 <body>
   <div>
     <center><h1 class="title">Biographie</h1></center>
-    
+
     <div style="background-color: #FCD299; padding: 10px; text-align: center; border-radius: 20px; font-size: 20px; border: black solid">
-      <!-- alors ici margin ajoute un espacement horizontale, et "text-décoration" est utiliser pour supprimer le soulignement sur les lien"-->
       <a href="#a-propos-de-moi" style="color: white; margin: 0 20px; text-decoration: none;">A propos</a>
       <a href="#Mes-competences" style="color: white; margin: 0 20px; text-decoration: none;">Compétences</a>
       <a href="#Mes-liens-preferes" style="color: white; margin: 0 20px; text-decoration: none;">Mes liens préférés</a>
-      <a href="index.html" style="color: white; margin: 0 20px; text-decoration: none;">Retour</a> 
-    </div> <!-- Utiliser pour organiser les code en case-->
+      <a href="#Inscription" style="color: white; margin: 0 20px; text-decoration: none;">Inscription</a>
+      <a href="index.html" style="color: white; margin: 0 20px; text-decoration: none;">Retour</a>
+    </div>
   </div>
- 
-  <div id="a-propos-de-moi"> <!-- Ont utilise id pour faire lien a un code CSS par exmple si on veut que une boite spécifique soit blanc un doi mettre id pour que sa cible cette boite spécifique-->
-    <center><h2>À propos de moi</h2></center>
 
-    <div style="
-      text-align: center; 
-      font-size: 20px; 
-      font-weight: bold; 
-      background-color: #f4f4f4; /* couleur de l'arriere plan */
-      padding: 20px; 
-      border-radius: 10px; /* arrondis les coin */
-      width: 50%; 
-      margin: auto; /* centre le div horizontalement */
-    ">
-      <p><strong>-Pseudo nom:</strong> Codeur531</p><!-- p est utiliser pour cree un pragrpahe et strong est utiliser pour les titres les titres en gras-->
-      <p><strong>-Âge:</strong> 16 ans</p> <!-- p est utiliser pour cree un pragrpahe et strong est utiliser pour les titres les titres en gras-->
-      <p><strong>-Niveau scolaire:</strong> 11e</p> <!-- p est utiliser pour cree un pragrpahe et strong est utiliser pour les titres les titres en gras-->
+  <div id="a-propos-de-moi">
+    <center><h2>À propos de moi</h2></center>
+    <div style="text-align: center; font-size: 20px; font-weight: bold; background-color: #f4f4f4; padding: 20px; border-radius: 10px; width: 50%; margin: auto;">
+      <p><strong>-Pseudo nom:</strong> Codeur531</p>
+      <p><strong>-Âge:</strong> 16 ans</p>
+      <p><strong>-Niveau scolaire:</strong> 11e</p>
       <p> -Créé une entreprise avec le Focus Affaire</p>
-      <p><strong>-Participation:</strong> Compétitions de jeux vidéo<span id="emoji" data-text="copy" class="emojifont">🎮</span></p> <!-- Ajouter un emoji-->
+      <p><strong>-Participation:</strong> Compétitions de jeux vidéo<span id="emoji" data-text="copy" class="emojifont">🎮</span></p>
       <p><strong>-Animal préféré:</strong> marmotte</p>
       <p>-Photo qui me représente:</p>
-      <img src="https://th.bing.com/th/id/R.27e0dde83a136b4decdaee0e4b7d42a9?rik=7WDOb123vJiotQ&riu=http%3a%2f%2fharmony2011.h.a.pic.centerblog.net%2fo%2fc8df7462.jpg&ehk=OE7GreXSPBvkea4s3v%2bmW0C31d%2bGGdezF9nVpXULt0s%3d&risl=&pid=ImgRaw&r=0" width="300" alt="Marmotte"/> 
+      <img src="https://th.bing.com/th/id/R.27e0dde83a136b4decdaee0e4b7d42a9?rik=7WDOb123vJiotQ&riu=http%3a%2f%2fharmony2011.h.a.pic.centerblog.net%2fo%2fc8df7462.jpg&ehk=OE7GreXSPBvkea4s3v%2bmW0C31d%2bGGdezF9nVpXULt0s%3d&risl=&pid=ImgRaw&r=0" width="300" alt="Marmotte"/>
       <p> J'ai choisi la marmotte parce que ce sont des animaux calmes et ne s'inquiètent pas beaucoup comme moi. De plus les marmottes sorte durant le printemps et l'été et ce sont mes deux saisons préférées.</p>
     </div>
   </div>
 
   <div id="Mes-competences">
-    <div style="text-align: center; margin: 20px;"> <!-- centre le texte et ajoute des marges autours de la sections-->
-      <h2>Mes compétences</h2> <!-- crée une section pour liée le CSS-->
-      
-      <div style="background: #f5f7fa; border-radius: 10px; width: 300px; padding: 15px; margin: 0 auto; border: 1px solid #ddd;"> <!-- Ajoute un arriere plan et arrondis les coins--> <!-- Ici je crée mon tableau en utilisant le code "table"-->
-        <h3>Compétences technologiques</h3> <!-- Affiche le titre-->
+    <div style="text-align: center; margin: 20px;">
+      <h2>Mes compétences</h2>
+      <div style="background: #f5f7fa; border-radius: 10px; width: 300px; padding: 15px; margin: 0 auto; border: 1px solid #ddd;">
+        <h3>Compétences technologiques</h3>
         <table style="width: 100%; border-collapse: collapse;">
           <tr style="background: #eee;">
-            <th style="padding: 5px; text-align: left;">Technologie</th> <!-- th crée une en tete pour le tableau-->
-            <th style="padding: 5px; text-align: left;">Niveau</th><!-- th crée une en tete pour le tableau-->
-          </tr>
-          <tr><!-- tr crée des lignes pour le tableau-->
-            <td style="padding: 5px; border-bottom: 1px solid #ddd;">HTML & CSS</td> <!--  ( style ="padding: 5px... ) Ajoute un remplissage gris dans chauqe boite et bordure interieure-->
-            <td style="padding: 5px; border-bottom: 1px solid #ddd;">Débutant</td><!-- Crée une case dans le tableau-->
+            <th style="padding: 5px; text-align: left;">Technologie</th>
+            <th style="padding: 5px; text-align: left;">Niveau</th>
           </tr>
           <tr>
-            <td style="padding: 5px; border-bottom: 1px solid #ddd;">JavaScript</td><!-- Crée une case dans le tableau-->
-            <td style="padding: 5px; border-bottom: 1px solid #ddd;">Débutant</td><!-- Crée une case dans le tableau-->
+            <td style="padding: 5px; border-bottom: 1px solid #ddd;">HTML & CSS</td>
+            <td style="padding: 5px; border-bottom: 1px solid #ddd;">Débutant</td>
           </tr>
           <tr>
-            <td style="padding: 5px; border-bottom: 1px solid #ddd;">Shopify</td><!-- Crée une case dans le tableau-->
-            <td style="padding: 5px; border-bottom: 1px solid #ddd;">Compétent</td><!-- Crée une case dans le tableau-->
+            <td style="padding: 5px; border-bottom: 1px solid #ddd;">JavaScript</td>
+            <td style="padding: 5px; border-bottom: 1px solid #ddd;">Débutant</td>
           </tr>
           <tr>
-            <td style="padding: 5px;">Python</td> <!-- Crée une case dans le tableau-->
-            <td style="padding: 5px;">Débutant</td><!-- Crée une case dans le tableau-->
+            <td style="padding: 5px; border-bottom: 1px solid #ddd;">Shopify</td>
+            <td style="padding: 5px; border-bottom: 1px solid #ddd;">Compétent</td>
+          </tr>
+          <tr>
+            <td style="padding: 5px;">Python</td>
+            <td style="padding: 5px;">Débutant</td>
           </tr>
         </table>
-      </div><!-- Dvision pour etre mieux organiser-->
+      </div>
     </div>
   </div>
- 
+
   <div id="Mes-liens-preferes">
     <div class="mes-liens-preferes">
       <center>
@@ -132,6 +119,54 @@
         <a href="https://maze.toys/mazes/mini/daily/" class="link-box" target="_blank">4.Mini maze</a>
       </center>
     </div>
+  </div>
+
+  <!-- FORMULAIRE D'INSCRIPTION -->
+  <div id="Inscription" style="padding: 20px; background: #fff0e6; margin: 30px; border-radius: 15px;">
+    <center><h2>Formulaire d'inscription</h2></center>
+    <form>
+      <label for="txtPrenom">Nom:</label>
+      <input type="text" id="txtPrenom"><br><br>
+
+      <label for="txtMilieu">Nom du milieu:</label>
+      <input type="text" id="txtMilieu"><br><br>
+
+      <label for="txtFamille">Dernier nom:</label>
+      <input type="text" id="txtFamille"><br><br>
+
+      <label for="chkLangues">Langues parlées:</label><br>
+      <input type="checkbox" name="langues" value="Initiales">Initiales<br>
+      <input type="checkbox" name="langues" value="Nom d'utilisateur">Nom d'utilisateur<br>
+      <input type="checkbox" name="langues" value="Nom au complet">Nom au complet<br><br>
+
+      <input type="button" id="btnSoumet" onclick="confirmeInscription()" value="Soumettre le formulaire"><br><br>
+
+      <div id="divAffiche"></div>
+    </form>
+
+    <script>
+      function confirmeInscription() {
+        var prenom = document.getElementById("txtPrenom").value;
+        var milieu = document.getElementById("txtMilieu").value;
+        var famille = document.getElementById("txtFamille").value;
+
+        var checkLangues = document.getElementsByName("langues");
+        var message = "";
+        for (var i = 0; i < checkLangues.length; i++) {
+          if (checkLangues[i].checked) {
+            if (checkLangues[i].value === "Initiales") {
+              message += "<br>Initiales: " + prenom.charAt(0) + "." + milieu.charAt(0) + "." + famille.charAt(0);
+            } else if (checkLangues[i].value === "Nom au complet") {
+              message += "<br>Nom au complet: " + prenom + " " + milieu + " " + famille;
+            } else if (checkLangues[i].value === "Nom d'utilisateur") {
+              message += "<br>Nom d’utilisateur: " + prenom.charAt(0).toLowerCase() + milieu.charAt(0).toLowerCase() + famille.toLowerCase();
+            }
+          }
+        }
+
+        document.getElementById("divAffiche").innerHTML = message;
+      }
+    </script>
   </div>
 </body>
 </html>
